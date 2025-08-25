@@ -1,10 +1,10 @@
-Memecoin Alpha & Hype Tracker Bot
+## Memecoin Alpha & Hype Tracker Bot
 📖 Overview
 This high-speed, automated Python script is designed to monitor a curated list of influential X (formerly Twitter) accounts to detect early mentions of new memecoins. The primary goal is to identify potential launches on platforms like pump.fun and quantify social media hype in real-time. By automating the discovery process, the bot aims to provide a significant informational edge in the fast-paced memecoin market.
 
 The bot parses tweets for high-priority signals such as contract addresses (CAs) and launchpad links. Once a potential coin is identified, it immediately measures its "Hype Velocity" by tracking mentions across X, and logs all actionable data to a Google Sheet for quick analysis and decision-making.
 
-✨ Features
+## Features
 Influencer Monitoring: Continuously monitors the timelines of a specified list of X usernames from a Google Sheet.
 
 Multi-Signal Detection: Scans tweets with a prioritized approach:
@@ -21,7 +21,7 @@ Automated Data Logging: All findings are structured and exported in real-time to
 
 Robust & Resilient: Includes error handling and retry logic to ensure continuous operation.
 
-⚙️ How It Works
+## ⚙️ How It Works
 Initialization: The script authenticates with the X API v2 and the Google Sheets API using your provided credentials.
 
 Load Targets: It fetches the list of target X usernames from your designated 'Target Accounts' Google Sheet.
@@ -36,26 +36,26 @@ Data Output: The collected data—including the CA, source account, detection ti
 
 Loop & Repeat: The script waits for a configured interval (e.g., 60 seconds) before repeating the process to check for new tweets, ensuring it stays up-to-date while respecting API rate limits.
 
-🚀 Setup and Usage
+## 🚀 Setup and Usage
 For a detailed, step-by-step guide on acquiring API keys and configuring your environment, please refer to the Setup Guide provided with the script. The basic steps are:
 
-Prerequisites: Install Python 3.8+ and the required libraries:
+## Prerequisites: Install Python 3.8+ and the required libraries:
 
 pip install tweepy pandas gspread oauth2client
 
-API Keys:
+## API Keys:
 
 Obtain a Bearer Token from the X Developer Portal.
 
 Set up a Google Cloud Project, enable the Google Drive & Sheets APIs, and download the JSON credentials for a service account.
 
-Google Sheets Setup:
+## Google Sheets Setup:
 
 Create two sheets: one for input (Target Accounts) and one for output (Memecoin Alpha).
 
 Share both sheets with the client_email found in your Google JSON credentials file, granting it "Editor" permissions.
 
-Configure the Script:
+## Configure the Script:
 
 Edit the memecoin_tracker.py file and fill in the following variables:
 
@@ -67,7 +67,7 @@ INPUT_SHEET_NAME
 
 OUTPUT_SHEET_NAME
 
-Run the Bot:
+## Run the Bot:
 
 python memecoin_tracker.py
 
